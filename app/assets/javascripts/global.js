@@ -390,7 +390,7 @@ function initialize_map() {
 
 
 	var image = new google.maps.MarkerImage(
-		'css/images/icon_marker.png',
+		'images/icon_marker.png',
 		new google.maps.Size(42,62),
 		new google.maps.Point(0,0),
 		new google.maps.Point(21,62)
