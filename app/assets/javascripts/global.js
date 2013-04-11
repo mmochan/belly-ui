@@ -285,12 +285,13 @@ $(function() {
 *
 **************************/
 function update_extras_price() {
-	var base_price = 1280;
+	/*var base_price = 1280; */
+	var base_price = 300;	
 	var extras = $('input:checked').length;
 	var extras_price = (extras*15);
 	var total_price = base_price + extras_price;
-	$('#extras_price').html(extras_price.toFixed(2) + " GBP");
-	$('#total_price').html(total_price.toFixed(2) + " GBP");
+	$('#extras_price').html(extras_price.toFixed(2) + " AUD");
+	$('#total_price').html(total_price.toFixed(2) + " AUD");
 }
 
 function update_total_price() {
@@ -327,7 +328,7 @@ function update_total_price() {
 	var days = returnNumberOfDaysBetweenTwoDates($('.datepicker_from').datepicker( "getDate" ), $('.datepicker_to').datepicker( "getDate" ));
 	total_price = total_price * days * parseInt($('.select_rooms').val());
 
-	$('#total_price').html(total_price.toFixed(2) + " GBP");
+	$('#total_price').html(total_price.toFixed(2) + " AUD");
 	$('#total_price').css('letterSpacing', '0px');
 	if(total_price < 100) {
 		$('#total_price').css('letterSpacing', '2px');

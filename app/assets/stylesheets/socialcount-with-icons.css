@@ -236,7 +236,7 @@
 }
 
 .icon-sprite, .icon-facebook, .icon-googleplus, .icon-share, .icon-twitter {
-  background: url('images/icon-s8df06ae4f6.png') no-repeat;
+  background: image-url('icon-s8df06ae4f6.png') no-repeat;
 }
 
 .icon-facebook {
@@ -270,6 +270,6 @@
     -moz-background-size: auto 17px;
     -o-background-size: auto 17px;
     background-size: auto 17px;
-    background-image: url('images/icon-hd-s9293bc9986.png');
+    background-image: image-url('icon-hd-s9293bc9986.png');
   }
 }
