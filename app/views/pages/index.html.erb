@@ -1,23 +1,148 @@
-<h1>Listing pages</h1>
+  <div class="span12 slideshow">
+    <div class="slider-wrapper theme-default">
+      <div class="ribbon"></div>
+      <div id="nivoslider-125" class="nivoSlider">
+        
+        <img src="assets/slide-10.png" alt="" />
+        <img src="assets/slide-11.png" alt="" />
+        <img src="assets/slide-12.png" alt="" />        
+        
+      </div>
+    </div>
+    <div id="nivoslider-125-caption-0" class="nivo-html-caption">You can add captions too&#8230;</div>
+  </div>
+  
+</div>
+<div class="row-fluid home">
+  <div class="span12">
+    <h2>start <span>Booking your hammock</span><br > select your dates and options below</h2>
+  </div>
+</div>
+<form class="form-inline">
+  <div class="row-fluid home">
+    <div class="span3">
+            <div class="room_selector" data-price="34" data-adults="1" data-kids="1">
+        <h5><a href="#" class="pull-left"><i class="icon-chevron-left"></i></a>Beach Front<a href="#" class="pull-right "><i class="icon-chevron-right"></i></a></h5>
+        <a href="listings.html"><img src="assets/slide-13.png" alt="" /></a>
+        <p>All our rooms have one single hammock and sleeps one. A 25-inch TV is included.</p>
+      </div>
+    </div>    
+    <div class="span3 home_calendar">
+            <div class="form-horizontal">     
+        <div class="control-group">
+          <label class="control-label pull-left" for="inputEmail">Arrive</label>
+          <div class="controls">
+            <input type="text" value="" class="span2 check-in-date" value="2012/11/22"/>
+          </div>
+        </div>
+      </div>
+      <div class="datepicker_from"></div>
+    </div>
+    <div class="span3 home_calendar">
+            <div class="form-horizontal">     
+        <div class="control-group">
+          <label class="control-label pull-left" for="inputEmail">Depart</label>
+          <div class="controls">
+            <input type="text" value="" class="span2 check-out-date" value="2012/11/22"/>
+          </div>
+        </div>
+      </div>
+      <div class="datepicker_to"></div>
+    </div>
 
-<table>
-  <tr>
-    <th>Test</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+    <div class="span3">
+      <div class="form-horizontal">
+        
+        <div class="control-group">
+          <label class="control-label" for="inputEmail">Hammocks</label>
+          <div class="controls">
+            <select class="span1 select_rooms">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+        </div>      
+        
+        
+        <div class="control-group">
+          <label class="control-label" for="inputEmail">Pick-up?</label>
+          <div class="controls">
+            <select class="span1 select_adults">
+              <option>no</option>
+              <option>yes</option>
+              
+            </select>
+          </div>
+        </div>
+        
+        <div class="control-group">
+          <label class="control-label" for="inputEmail">Drop-off?</label>
+          <div class="controls">
+            <select class="span1 select_kids">
+              <option>no</option>
+              <option>yes</option>
+            </select>
+          </div>
+        </div>
+        
 
-<% @pages.each do |page| %>
-  <tr>
-    <td><%= page.test %></td>
-    <td><%= link_to 'Show', page %></td>
-    <td><%= link_to 'Edit', edit_page_path(page) %></td>
-    <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+        </div>
+    <div id="total_price" class="price">30.00 AUD</div>
+    <%= link_to "Book now!", new_reservation_path,  :class => "btn btn-primary btn-large book-now" %>
+  </div>    
+</div>  
+</form>
+<hr />
+<div class="row-fluid">
+  
+  <div class="span3">
+    <h3><span>H</span>ammocks</h3>
+    <a href="rooms.html"><img src="assets/slide-14.png" alt="" /></a>
+    <p>Bring your own Hammock</p>
+  </div>    
+  <div class="span3">
+    <h3><span>S</span>ervices</h3>
+    <a href="facilities.html"><img src="assets/harley_in_truck-002.png" alt="" /></a>
+    <p>We offer a pick-up and drop-off service</p>
+  </div>    
+  <div class="span3">
+    <h3><span>P</span>romotions</h3>
+    <a href="promotions.html"><img src="assets/promotions.png" alt="" /></a>
+    <p>Stay five nights and get one night totally <b>FREE</b>!</p>
+  </div>    
+  <div class="span3">
+    <h3><span>L</span>ocation</h3>
+    <a href="map.html"><img src="assets/location.png" alt="" /></a>
+    <p>We're easily accessible - 30mins North of the Brisbane CBD.</p>
+  </div>    
+</div>    
 
-<br />
 
-<%= link_to 'New Page', new_page_path %>
+<div class="row">
+  <div class="span12 what_people_say">
+    <div id="quotes">
+      <blockquote class="textItem" style="display: none;">
+        <p>This is the best resort I've ever been to.</p>
+        <small>Eric <cite title="Source Title">German Shepherd</cite></small>
+      </blockquote>     
+      
+      <blockquote class="textItem" style="display: none;">
+        <p>The food is incredible.</p>
+        <small>Harley <cite title="Source Title">Australian Cattle Dog</cite></small>
+      </blockquote>     
+      
+      <blockquote class="textItem" style="display: none;">
+        <p>Beyond All Expectations</p>
+        <small>Ernie <cite title="Source Title">German Shepherd</cite></small>
+      </blockquote>
+
+      <blockquote class="textItem" style="display: none;">
+        <p>Didn't like the birds</p>
+        <small>I prefer to  <cite title="Source Title">remain anonymous</cite></small>
+      </blockquote>
+
+    </div>
+  </div>  
+</div></div> <!-- /container -->

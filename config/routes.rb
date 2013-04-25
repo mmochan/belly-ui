@@ -1,4 +1,7 @@
 BellyUi::Application.routes.draw do
+  
+
+  resources :reservations
   resources :pages
   root :to => 'pages#index'
 
