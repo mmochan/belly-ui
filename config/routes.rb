@@ -1,6 +1,11 @@
 BellyUi::Application.routes.draw do
   
 
+  get 'gallery' => 'gallery#index'
+  get 'maps' => 'map#index'
+
+
+
   resources :reservations
 
 
