@@ -4,7 +4,7 @@
   <title>BellyUi</title>
   <%= stylesheet_link_tag    "application", "hotel", "nivo-slider", "hotel-responsive", 
   "socialcount-with-icons", "bootstrap.min", "default", :media => "all" %>
-  <%= javascript_include_tag "application", "main" %>
+  <%= javascript_include_tag "application", "main", "bootstrap-responsive.min" %>
   <%= csrf_meta_tags %>
 	
 	<style>
@@ -49,16 +49,19 @@
 									<li class=""><a href="hammocks.html">Hammocks</a></li>
 									<li class=""><a href="gallery.html">Gallery</a></li>
 									<li class=""><a href="map.html">Map</a></li>
-									<li class=""><a href="book-start.html">Book</a></li>
+									<li><%= link_to "Book", hammocks_path %></li>
+									
 								</ul>
 							</div><!-- /.nav-collapse -->
 						</div>
 					</div><!-- /navbar -->
 				</div>
 			</div><!-- end header -->
-		<div class="row-fluid slideshow-row">
+
+
 	
-<%= yield %>
+			<%= yield %>
+
 
 <footer>
 	<div class="container">

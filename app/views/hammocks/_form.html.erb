@@ -1,0 +1,33 @@
+<%= form_for(@hammock) do |f| %>
+  <% if @hammock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hammock.errors.count, "error") %> prohibited this hammock from being saved:</h2>
+
+      <ul>
+      <% @hammock.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :booking_id %><br />
+    <%= f.number_field :booking_id %>
+  </div>
+  <div class="field">
+    <%= f.label :checkin %><br />
+    <%= f.date_select :checkin %>
+  </div>
+  <div class="field">
+    <%= f.label :checkout %><br />
+    <%= f.date_select :checkout %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

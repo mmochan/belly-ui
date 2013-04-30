@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Salutation:</b>
+  <%= @reservation.salutation %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @reservation.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @reservation.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @reservation.email %>
+</p>
+
+<p>
+  <b>Mobile:</b>
+  <%= @reservation.mobile %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @reservation.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @reservation.city %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%= @reservation.postcode %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @reservation.state %>
+</p>
+
+<p>
+  <b>Special requests:</b>
+  <%= @reservation.special_requests %>
+</p>
+
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservations_path %>

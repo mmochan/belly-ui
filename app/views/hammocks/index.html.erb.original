@@ -1,0 +1,29 @@
+<h1>Listing hammocks</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Booking</th>
+    <th>Checkin</th>
+    <th>Checkout</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @hammocks.each do |hammock| %>
+  <tr>
+    <td><%= hammock.name %></td>
+    <td><%= hammock.booking_id %></td>
+    <td><%= hammock.checkin %></td>
+    <td><%= hammock.checkout %></td>
+    <td><%= link_to 'Show', hammock %></td>
+    <td><%= link_to 'Edit', edit_hammock_path(hammock) %></td>
+    <td><%= link_to 'Destroy', hammock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Hammock', new_hammock_path %>

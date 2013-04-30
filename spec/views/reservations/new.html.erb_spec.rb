@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe "reservations/edit" do
+describe "reservations/new" do
   before(:each) do
-    @reservation = assign(:reservation, stub_model(Reservation,
+    assign(:reservation, stub_model(Reservation,
       :salutation => "MyString",
       :first_name => "MyString",
       :last_name => "MyString",
@@ -13,14 +13,14 @@ describe "reservations/edit" do
       :postcode => "MyString",
       :state => "MyString",
       :special_requests => "MyText"
-    ))
+    ).as_new_record)
   end
 
-  it "renders the edit reservation form" do
+  it "renders new reservation form" do
     render
 
     # Run the generator again with the --webrat flag if you want to use webrat matchers
-    assert_select "form[action=?][method=?]", reservation_path(@reservation), "post" do
+    assert_select "form[action=?][method=?]", reservations_path, "post" do
       assert_select "input#reservation_salutation[name=?]", "reservation[salutation]"
       assert_select "input#reservation_first_name[name=?]", "reservation[first_name]"
       assert_select "input#reservation_last_name[name=?]", "reservation[last_name]"

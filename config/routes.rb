@@ -2,6 +2,11 @@ BellyUi::Application.routes.draw do
   
 
   resources :reservations
+
+
+  resources :hammocks
+
+  resources :reservations
   resources :pages
   root :to => 'pages#index'
 

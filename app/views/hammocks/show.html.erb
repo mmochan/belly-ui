@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @hammock.name %>
+</p>
+
+<p>
+  <b>Booking:</b>
+  <%= @hammock.booking_id %>
+</p>
+
+<p>
+  <b>Checkin:</b>
+  <%= @hammock.checkin %>
+</p>
+
+<p>
+  <b>Checkout:</b>
+  <%= @hammock.checkout %>
+</p>
+
+
+<%= link_to 'Edit', edit_hammock_path(@hammock) %> |
+<%= link_to 'Back', hammocks_path %>
