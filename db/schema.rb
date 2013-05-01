@@ -13,21 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20130430085416) do
 
-  create_table "bookings", :force => true do |t|
-    t.string   "salutation"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.string   "mobile"
-    t.text     "address"
-    t.string   "city"
-    t.string   "postcode"
-    t.string   "state"
-    t.text     "special_requests"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
-  end
-
   create_table "hammocks", :force => true do |t|
     t.string   "name"
     t.integer  "booking_id"
