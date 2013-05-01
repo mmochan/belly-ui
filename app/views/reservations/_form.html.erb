@@ -18,30 +18,35 @@
 							<div class="span8">
 								<legend><span>Your</span> name</legend>
 							</div>
+<%= simple_form_for(@reservation) do |f| %>
+  <%= f.error_notification %>
 
-							<div class="span3">
-								<label>
-									<select>
-										<option>Mr.</option>
-										<option>Mrs.</option>
-										<option>Miss.</option>
-									</select>
-								</label>
-							</div>
+  <div class="form-inputs">
+		<div class="span3">
+			<label>
 
-							<div class="span3">
-								<label>
-									<input type="text" placeholder="First Name...">
-								</label>
-							</div>	
+					<%= f.input :salutation %>
 
-							<div class="span3">
-								<label>
-									<input type="text" placeholder="Last Name...">
-								</label>
-							</div>
-							
-						</div>		
+			</label>
+		</div>
+	<div class="span3">
+		<label>
+			<input type="text" placeholder="First Name...">
+		</label>
+	</div>	
+
+	<div class="span3">
+		<label>
+			<input type="text" placeholder="Last Name...">
+		</label>
+	</div>
+
+
+  </div>
+
+<% end %>
+
+	
 						<br />
 						<div class="row">
 							<div class="span8">

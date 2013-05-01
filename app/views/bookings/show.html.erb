@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Salutation:</b>
+  <%= @booking.salutation %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @booking.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @booking.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @booking.email %>
+</p>
+
+<p>
+  <b>Mobile:</b>
+  <%= @booking.mobile %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @booking.address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @booking.city %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%= @booking.postcode %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @booking.state %>
+</p>
+
+<p>
+  <b>Special requests:</b>
+  <%= @booking.special_requests %>
+</p>
+
+
+<%= link_to 'Edit', edit_booking_path(@booking) %> |
+<%= link_to 'Back', bookings_path %>

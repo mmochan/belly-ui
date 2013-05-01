@@ -369,14 +369,14 @@ function initialize_map() {
 	if($('#map_canvas').length == 0)
 		return false;
 
-	var latlng = new google.maps.LatLng(4.171308062373071, 73.50106716156006);
+	var latlng = new google.maps.LatLng(-27.383305, 152.831047);
 	var settings = {
-		zoom: 16,
+		zoom: 13,
 		center: latlng,
 		scrollwheel: false,
 		navigationControl: false,
 		scaleControl: false,
-		streetViewControl: false,
+		streetViewControl: true,
 		draggable: true, 
 		mapTypeControl: true,
 		mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
@@ -387,11 +387,11 @@ function initialize_map() {
 
 
 	var map = new google.maps.Map(document.getElementById("map_canvas"), settings);
-	var point = new google.maps.LatLng(4.171308062373071, 73.50106716156006);
+	var point = new google.maps.LatLng(-27.383305, 152.831047);
 
 
 	var image = new google.maps.MarkerImage(
-		'images/icon_marker.png',
+		'assets/icon_marker.png',
 		new google.maps.Size(42,62),
 		new google.maps.Point(0,0),
 		new google.maps.Point(21,62)

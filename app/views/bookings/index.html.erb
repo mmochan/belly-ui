@@ -1,0 +1,41 @@
+<h1>Listing bookings</h1>
+
+<table>
+  <tr>
+    <th>Salutation</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Postcode</th>
+    <th>State</th>
+    <th>Special requests</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bookings.each do |booking| %>
+  <tr>
+    <td><%= booking.salutation %></td>
+    <td><%= booking.first_name %></td>
+    <td><%= booking.last_name %></td>
+    <td><%= booking.email %></td>
+    <td><%= booking.mobile %></td>
+    <td><%= booking.address %></td>
+    <td><%= booking.city %></td>
+    <td><%= booking.postcode %></td>
+    <td><%= booking.state %></td>
+    <td><%= booking.special_requests %></td>
+    <td><%= link_to 'Show', booking %></td>
+    <td><%= link_to 'Edit', edit_booking_path(booking) %></td>
+    <td><%= link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Booking', new_booking_path %>
