@@ -7,9 +7,8 @@ class CreateReservations < ActiveRecord::Migration
       t.string :email
       t.string :mobile
       t.text :address
-      t.string :city
+      t.string :suburb
       t.string :postcode
-      t.string :state
       t.text :special_requests
 
       t.timestamps
