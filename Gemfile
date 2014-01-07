@@ -1,11 +1,16 @@
 source 'https://rubygems.org'
+ruby "2.0.0"
+
 
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+platforms :ruby do
+  gem 'pg'
+  #gem 'sqlite3'
+end
 
 
 # Gems used only for assets and not required
@@ -28,6 +33,13 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 gem 'simple_form'
 
+
+platforms :jruby do
+  gem 'activerecord-jdbcsqlite3-adapter'
+  gem 'trinidad'
+  gem 'jruby-openssl'
+end
+
 group :development do
   gem 'irbtools'
   gem 'rails-footnotes', '>= 3.7.9'
@@ -38,6 +50,7 @@ group :development do
   gem 'rb-fsevent', :require => false
   gem 'rb-fchange', :require => false
   gem 'terminal-notifier'
+  gem 'xray-rails'
 
 end
 
